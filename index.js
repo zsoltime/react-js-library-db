@@ -104,7 +104,7 @@ const initialLibraries = [
   },
 ];
 
-const Modal = (props) => (
+const Modal = props => (
   <div className="modal-overlay">
     <div className="modal">
       <button
@@ -116,6 +116,11 @@ const Modal = (props) => (
     </div>
   </div>
 );
+
+Modal.propTypes = {
+  children: React.PropTypes.node.isRequired,
+  onClose: React.PropTypes.func.isRequired,
+};
 
 class App extends React.Component {
   constructor(props) {
